@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Learn</string>
     <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="fcm_token">FCM Token: %s</string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
 

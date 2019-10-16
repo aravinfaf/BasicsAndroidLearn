@@ -44,6 +44,8 @@ dependencies {
     //ViewModel
     def lifecycle_version = "2.1.0"
     def roomVersion = '2.2.0-beta01'
+    def work = "2.1.0"
+
 
     // ViewModel and LiveData
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
@@ -87,5 +89,9 @@ dependencies {
     implementation "com.jakewharton:butterknife:10.1.0"
     annotationProcessor "com.jakewharton:butterknife-compiler:10.1.0"
 
+    implementation "androidx.work:work-runtime:$work"
+
+    //Add FCM
+    implementation 'com.google.firebase:firebase-messaging:17.3.4'
 }
 apply plugin: 'com.google.gms.google-services'
