@@ -3,47 +3,50 @@
     package="com.e.learn">
 
     <application
+        android:name=".dagger_retrofit.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".workmanager.WorkManagerMain"></activity>
-        <activity
-            android:name=".viewmodel.ScrollingActivity"
-            android:label="@string/title_activity_scrolling"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".pagination.MainPage"></activity>
-        <activity android:name=".FlipImageAnimation" />
-        <activity android:name=".recyclerviewmodel.RecyclerMain">
+        <activity android:name=".dagger_retrofit.MainDaggerRetrofit">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".dagger.Main">
+
+        </activity>
+        <activity android:name=".workmanager.WorkManagerMain" />
+        <activity
+            android:name=".viewmodel.ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".pagination.MainPage" />
+        <activity android:name=".FlipImageAnimation" />
+        <activity android:name=".recyclerviewmodel.RecyclerMain"></activity>
         <activity android:name=".viewmodel.NewWordActivity" />
         <activity android:name=".viewmodel.MainScoreActivity" />
         <activity android:name=".newviewmodel.NewView" />
-        <activity android:name=".recyclerviewmodel.NormalRecycler"></activity>
+        <activity android:name=".recyclerviewmodel.NormalRecycler" />
 
         <service android:name=".firebase.FirebaseMessaginID">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
-
         <service android:name=".pushnotification.MyFirebaseMessagingService">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
     <uses-permission android:name="android.permission.INTERNET" />
 
-    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
