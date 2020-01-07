@@ -1,22 +1,15 @@
 package com.e.learn.dagger_retrofit;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
-
+import androidx.appcompat.app.AppCompatActivity;
 import com.e.learn.R;
 import com.e.learn.recyclerviewmodel.Api;
 import com.e.learn.recyclerviewmodel.Hero;
-
 import java.util.List;
-
 import javax.inject.Inject;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import retrofit2.Call;
@@ -63,16 +56,12 @@ public class MainDaggerRetrofit extends AppCompatActivity {
                     }
                     recyclerView.setAdapter(new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, hero));
                 }
-
             }
 
             @Override
             public void onFailure(Call<List<Hero>> call, Throwable t) {
-
                 Toast.makeText(MainDaggerRetrofit.this, ""+t.getMessage(), Toast.LENGTH_SHORT).show();
-
             }
         });
-
     }
 }

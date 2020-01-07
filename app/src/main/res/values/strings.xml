@@ -92,4 +92,10 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+    <string name="API_KEY">AIzaSyC0vTmXIMOuVxKGvgSChUSsNqdZW8W-7U8</string>
+
+    <string name="linear_sectioned_recyclerview_vertical">Linear Sectioned RecyclerView (Vertical)</string>
+    <string name="linear_sectioned_recyclerview_horizontal">Linear Sectioned RecyclerView (Horizontal)</string>
+    <string name="grid_sectioned_recyclerview">Grid Sectioned RecyclerView</string>
+    <string name="show_all">Show All</string>
 </resources>
