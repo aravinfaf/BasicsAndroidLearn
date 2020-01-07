@@ -36,4 +36,5 @@ public class Model {
 
     public void setmDesc(String mDesc) {
         this.mDesc = mDesc;
-    }}
+    }
+}

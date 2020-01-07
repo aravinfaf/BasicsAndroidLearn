@@ -11,17 +11,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".firebaserecyclerview.FirebaseInputActivity">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".blockdates.BlockDatesActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".firebaserecyclerview.FirebaseInputActivity">
+
         </activity>
         <activity android:name=".epoxy.EpoxyRercylerview" />
-        <activity android:name=".EnCryption">
-
-        </activity>
+        <activity android:name=".EnCryption"></activity>
         <activity android:name=".viewtype.ViewTypeActivity" />
         <activity android:name=".firebase.ActivitySendPushNotification" />
         <activity android:name=".firebase.DisplayToken" />
@@ -60,8 +61,8 @@
             </intent-filter>
         </service>
     </application>
-    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
-
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
 
 </manifest>

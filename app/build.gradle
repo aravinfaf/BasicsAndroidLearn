@@ -122,5 +122,8 @@ dependencies {
     // Add the annotation processor if you are using Epoxy's annotations (recommended)
     annotationProcessor 'com.airbnb.android:epoxy-processor:3.9.0'
 
+    //Block dates
+    implementation 'com.wdullaer:materialdatetimepicker:3.6.4'
+
 }
 apply plugin: 'com.google.gms.google-services'
