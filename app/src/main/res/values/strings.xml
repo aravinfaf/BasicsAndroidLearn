@@ -98,4 +98,6 @@
     <string name="linear_sectioned_recyclerview_horizontal">Linear Sectioned RecyclerView (Horizontal)</string>
     <string name="grid_sectioned_recyclerview">Grid Sectioned RecyclerView</string>
     <string name="show_all">Show All</string>
+
+    <string name="google_maps_key">AIzaSyAmo0iIBXm_gIBYZjsb2-RGsKY9fV307Oc</string>
 </resources>

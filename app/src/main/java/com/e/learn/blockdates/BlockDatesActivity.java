@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -57,51 +58,65 @@ public class BlockDatesActivity extends AppCompatActivity implements DatePickerD
 
                 // Setting Min Date to today date
                 Calendar min_date_c = Calendar.getInstance();
-                datePickerDialog.setMinDate(min_date_c);
+                //datePickerDialog.setMinDate(min_date_c);
+                datePickerDialog.setMaxDate(min_date_c);
 
+
+                    Calendar[] days = new Calendar[3];
+                    for (int i = 0; i < 3; i++) {
+                        Calendar day = Calendar.getInstance();
+                        day.add(Calendar.DAY_OF_MONTH+2, i );
+                        days[i] = day;
+
+                        Log.e("DAYS",""+days[i]);
+
+                    }
+
+
+                    datePickerDialog.setSelectableDays(days);
 
 
                 // Setting Max Date to next 2 years
-                Calendar max_date_c = Calendar.getInstance();
-                max_date_c.set(Calendar.YEAR, Year+2);
-                datePickerDialog.setMaxDate(max_date_c);
+//                Calendar max_date_c = Calendar.getInstance();
+//                max_date_c.set(Calendar.YEAR, Year+2);
+//                datePickerDialog.setMaxDate(max_date_c);
 
 
-
-                //Disable all SUNDAYS and SATURDAYS between Min and Max Dates
-                for (Calendar loopdate = min_date_c; min_date_c.before(max_date_c); min_date_c.add(Calendar.DATE, 1), loopdate = min_date_c) {
-                    int dayOfWeek = loopdate.get(Calendar.DAY_OF_WEEK);
-                    if (dayOfWeek == Calendar.SUNDAY || dayOfWeek == Calendar.SATURDAY) {
-                        Calendar[] disabledDays =  new Calendar[1];
-                        disabledDays[0] = loopdate;
-//                        datePickerDialog.setDisabledDays(disabledDays);
-                        datePickerDialog.setHighlightedDays(disabledDays);
-                        }
-                }
-
-                String[] holidays = {"07-01-2020","05-01-2020","12-01-2020",
+//                //Disable all SUNDAYS and SATURDAYS between Min and Max Dates
+//                for (Calendar loopdate = min_date_c; min_date_c.before(max_date_c); min_date_c.add(Calendar.DATE, 1), loopdate = min_date_c) {
+//                    int dayOfWeek = loopdate.get(Calendar.DAY_OF_WEEK);
+//                    if (dayOfWeek == Calendar.SUNDAY || dayOfWeek == Calendar.SATURDAY) {
+//                        Calendar[] disabledDays =  new Calendar[1];
+//                        disabledDays[0] = loopdate;
+////                        datePickerDialog.setDisabledDays(disabledDays);
+//                        datePickerDialog.setHighlightedDays(disabledDays);
+//                        }
+//                }
+//
+                String[] holidays = {"08-01-2020","05-01-2020","12-01-2020",
                                      "09-01-2020","10-01-2020","13-01-2020",
                                      "07-02-2020","20-01-2020","25-01-2020"};
 
                 java.util.Date date = null;
                 SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
 
-//                for (int i = 0;i < holidays.length; i++) {
-//
-//                    try {
-//                        date = sdf.parse(holidays[i]);
-//                    } catch (ParseException e) {
-//                        e.printStackTrace();
-//                    }
-//
-//                    calendar = dateToCalendar(date);
-//                    System.out.println(calendar.getTime());
-//
-//                    List<Calendar> dates = new ArrayList<>();
-//                    dates.add(calendar);
-//                    Calendar[] disabledDays1 = dates.toArray(new Calendar[dates.size()]);
-//                    datePickerDialog.setDisabledDays(disabledDays1);
-//                }
+                for (int i = 0;i < holidays.length; i++) {
+
+                    try {
+                        date = sdf.parse(holidays[i]);
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
+
+                    calendar = dateToCalendar(date);
+                    System.out.println(calendar.getTime());
+
+                    List<Calendar> dates = new ArrayList<>();
+                    dates.add(calendar);
+                    Calendar[] disabledDays1 = dates.toArray(new Calendar[dates.size()]);
+                    datePickerDialog.setDisabledDays(disabledDays1);
+
+                }
 
 
                 datePickerDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
