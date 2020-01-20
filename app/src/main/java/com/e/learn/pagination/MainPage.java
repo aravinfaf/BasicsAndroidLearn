@@ -45,6 +45,7 @@ public class MainPage extends AppCompatActivity  {
         rv.setAdapter(adapter);
 
         rv.addOnScrollListener(new PaginationScrollListener(linearLayoutManager) {
+
             @Override
             public boolean isLoading() {
                 return isLoading;
@@ -68,8 +69,6 @@ public class MainPage extends AppCompatActivity  {
                         loadNextpage();
                     }
                 }, 1000);
-
-
             }
 
             @Override
@@ -84,10 +83,7 @@ public class MainPage extends AppCompatActivity  {
                 loadFirstpage();
             }
         }, 1000);
-
-
     }
-
 
     private void loadFirstpage(){
 

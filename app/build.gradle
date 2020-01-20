@@ -5,7 +5,7 @@ android {
     buildToolsVersion "29.0.1"
     defaultConfig {
         applicationId "com.e.learn"
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -134,6 +134,15 @@ dependencies {
     //Glide
     implementation 'com.github.bumptech.glide:glide:4.10.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
+
+    //Loading button
+    implementation 'br.com.simplepass:loading-button-android:2.2.0'
+
+    //Razorpay
+    implementation 'com.razorpay:checkout:1.5.13'
+
+    //Picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
 
 }
 apply plugin: 'com.google.gms.google-services'

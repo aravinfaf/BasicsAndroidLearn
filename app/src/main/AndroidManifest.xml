@@ -11,17 +11,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".gmail.ProfileActivity"></activity>
-        <activity android:name=".gmail.GoogleSignIn" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".multiviewrecycler.MainRecyclerview">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity android:name=".map.DisplayMap">
+        <activity android:name=".razorpay.CheckoutActivity">
 
         </activity>
+        <activity android:name=".loading_button.LoadingButtonActivity"></activity>
+        <activity android:name=".gmail.ProfileActivity" />
+        <activity android:name=".gmail.GoogleSignIn" />
+        <activity android:name=".map.DisplayMap" />
         <activity android:name=".blockdates.BlockDatesActivity" />
         <activity android:name=".firebaserecyclerview.FirebaseInputActivity" />
         <activity android:name=".epoxy.EpoxyRercylerview" />
@@ -50,6 +53,9 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_test_ydlijheHBatlOQ" />
 
         <service android:name=".firebase.FirebaseMessaginID">
             <intent-filter>
