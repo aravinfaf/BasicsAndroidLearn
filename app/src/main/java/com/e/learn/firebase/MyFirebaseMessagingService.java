@@ -53,11 +53,11 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             //if there is no image
             if(imageUrl.equals("null")){
                 //displaying small notification
-                mNotificationManager.showSmallNotification(title, message, intent);
+                mNotificationManager.showNotificationMessage(title, message, intent);
             }else{
                 //if there is an image
                 //displaying a big notification
-                mNotificationManager.showBigNotification(title, message, imageUrl, intent);
+                mNotificationManager.showNotificationMessage(title, message,  intent);
             }
         } catch (JSONException e) {
             Log.e(TAG, "Json Exception: " + e.getMessage());

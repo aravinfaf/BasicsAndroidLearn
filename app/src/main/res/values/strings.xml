@@ -100,4 +100,14 @@
     <string name="show_all">Show All</string>
 
     <string name="google_maps_key">AIzaSyAmo0iIBXm_gIBYZjsb2-RGsKY9fV307Oc</string>
+    <string name="default_notification_channel_id">default notification</string>
+    <string name="default_notification_channel_name">sample</string>
+    <string name="msg_subscribed">subscribe</string>
+    <string name="msg_subscribe_failed">failed</string>
+    <string name="msg_token_fmt">token</string>
+    <string name="fcm_message">Hello all</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="terms_conditions"><![CDATA[I accept the terms & conditions]]></string>
+    <string name="agreement">Agreement</string>
 </resources>

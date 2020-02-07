@@ -11,17 +11,27 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".multiviewrecycler.MainRecyclerview">
+        <activity android:name=".multimagepicker.RandomImage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".razorpay.CheckoutActivity">
+        <activity android:name=".multimagepicker.MultiImagePicker">
 
         </activity>
-        <activity android:name=".loading_button.LoadingButtonActivity"></activity>
+        <activity android:name=".signature.Signature"></activity>
+        <activity android:name=".signature.NewSignatureActivity" />
+        <activity android:name=".signature.SignatureActivity" />
+        <activity android:name=".pushnotification.StaticNotification" />
+        <activity android:name=".googlepay.GooglePayActivity" />
+        <activity android:name=".designs.LoginActivity" />
+        <activity android:name=".pushnotification.PushActivity" />
+        <activity android:name=".screensizes.DifferentScreensActivity" />
+        <activity android:name=".multiviewrecycler.MainRecyclerview" />
+        <activity android:name=".razorpay.CheckoutActivity" />
+        <activity android:name=".loading_button.LoadingButtonActivity" />
         <activity android:name=".gmail.ProfileActivity" />
         <activity android:name=".gmail.GoogleSignIn" />
         <activity android:name=".map.DisplayMap" />
@@ -56,6 +66,9 @@
         <meta-data
             android:name="com.razorpay.ApiKey"
             android:value="rzp_test_ydlijheHBatlOQ" />
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
 
         <service android:name=".firebase.FirebaseMessaginID">
             <intent-filter>
@@ -67,15 +80,20 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service android:name=".eventbus.EventService" />
+        <service android:name=".eventbus.EventService" /> <!-- GooglePay -->
         <service android:name=".firebase.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
     </application>
-    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
-
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
 
 </manifest>

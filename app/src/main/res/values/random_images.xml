@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="apptour">
+        <item>@drawable/diet</item>
+        <item>@drawable/ic_profile</item>
+        <item>@drawable/ic_close</item>
+        <item>@drawable/ic_add_24dp</item>
+        <item>@drawable/rzp_logo</item>
+    </array>
+</resources>

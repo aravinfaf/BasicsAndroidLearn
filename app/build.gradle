@@ -10,6 +10,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
     testOptions {
         unitTests.includeAndroidResources = true
@@ -143,6 +144,18 @@ dependencies {
 
     //Picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
+
+    //Circular Imageview
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+
+
+    //GooglePay
+    implementation 'com.google.android.gms:play-services-wallet:16.0.0'
+
+    //Signature
+    implementation 'com.williamww:silky-signature:0.1.0'
+    implementation 'com.kyanogen.signatureview:signature-view:1.0'
+    implementation 'com.kyanogen.signatureview:signature-view:1.2'
 
 }
 apply plugin: 'com.google.gms.google-services'
