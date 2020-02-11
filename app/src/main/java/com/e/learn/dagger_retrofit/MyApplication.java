@@ -2,6 +2,8 @@ package com.e.learn.dagger_retrofit;
 
 import android.app.Application;
 
+import com.facebook.soloader.SoLoader;
+
 public class MyApplication extends Application {
 
 
@@ -15,6 +17,8 @@ public class MyApplication extends Application {
                 .appModule(new AppModule(this))
                 .apiModule(new ApiModule("https://simplifiedcoding.net/demos/"))
                 .build();
+
+        SoLoader.init(this,false);
     }
 
 

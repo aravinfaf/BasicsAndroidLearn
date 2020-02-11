@@ -11,17 +11,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".multimagepicker.RandomImage">
+        <activity android:name=".litho.LithoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".multimagepicker.MultiImagePicker">
+        <activity android:name=".multimagepicker.RandomImage">
 
         </activity>
-        <activity android:name=".signature.Signature"></activity>
+        <activity android:name=".multimagepicker.MultiImagePicker"></activity>
+        <activity android:name=".signature.Signature" />
         <activity android:name=".signature.NewSignatureActivity" />
         <activity android:name=".signature.SignatureActivity" />
         <activity android:name=".pushnotification.StaticNotification" />
@@ -87,13 +88,13 @@
             </intent-filter>
         </service>
     </application>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
-
     <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 </manifest>
