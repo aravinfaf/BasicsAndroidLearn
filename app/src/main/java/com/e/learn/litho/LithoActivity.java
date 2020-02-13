@@ -32,7 +32,7 @@ public class LithoActivity extends AppCompatActivity {
 
 
         Component component= RecyclerCollectionComponent.create(c).duplicateParentState(true)
-                .section(ListSection.create(new SectionContext(c)).build())
+                .section(FooSection.create(new SectionContext(c)).build())
                 .build();
 
         setContentView(LithoView.create(c,component));

@@ -12,11 +12,7 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity android:name=".litho.LithoActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".multimagepicker.RandomImage">
 
@@ -60,6 +56,16 @@
         <activity android:name=".viewmodel.MainScoreActivity" />
         <activity android:name=".newviewmodel.NewView" />
         <activity android:name=".recyclerviewmodel.NormalRecycler" />
+        <activity android:name=".litho.widgets.Widgets" >
+
+        </activity>
+        <activity android:name=".multimagepicker.RandomImages" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

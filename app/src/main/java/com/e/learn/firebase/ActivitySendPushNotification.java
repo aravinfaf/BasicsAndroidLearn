@@ -144,7 +144,6 @@ public class ActivitySendPushNotification extends AppCompatActivity implements R
                     @Override
                     public void onResponse(String response) {
                         progressDialog.dismiss();
-
                         Toast.makeText(ActivitySendPushNotification.this, response, Toast.LENGTH_LONG).show();
                     }
                 },
@@ -154,7 +153,6 @@ public class ActivitySendPushNotification extends AppCompatActivity implements R
 
                         progressDialog.dismiss();
                         Toast.makeText(ActivitySendPushNotification.this, error.toString(), Toast.LENGTH_LONG).show();
-
                     }
                 }) {
             @Override
@@ -176,7 +174,6 @@ public class ActivitySendPushNotification extends AppCompatActivity implements R
                 DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
 
         MyVolley.getInstance(this).addToRequestQueue(stringRequest);
-
     }
 
     @Override

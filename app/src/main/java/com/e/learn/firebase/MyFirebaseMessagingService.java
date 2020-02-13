@@ -65,5 +65,4 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             Log.e(TAG, "Exception: " + e.getMessage());
         }
     }
-
 }

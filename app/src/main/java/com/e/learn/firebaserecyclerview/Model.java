@@ -7,9 +7,7 @@ public class Model implements Parcelable {
 
     public String mId, mTitle, mDesc;
 
-    public Model() {
-
-    }
+    public Model() {}
 
     public Model(String mId, String mTitle, String mDesc) {
         this.mId = mId;
@@ -64,7 +62,6 @@ public class Model implements Parcelable {
        parcel.writeString(this.mId);
        parcel.writeString(this.mTitle);
        parcel.writeString(this.mDesc);
-
     }
 
     Model(Parcel parcel){
@@ -72,5 +69,4 @@ public class Model implements Parcelable {
         this.mDesc=parcel.readString();
         this.mTitle=parcel.readString();
     }
-
 }
