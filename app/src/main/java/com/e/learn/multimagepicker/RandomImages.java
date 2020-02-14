@@ -52,7 +52,5 @@ public class RandomImages extends AppCompatActivity {
                 }
             }
         });
-
-
     }
 }
