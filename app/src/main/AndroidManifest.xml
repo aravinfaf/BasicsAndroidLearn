@@ -26,11 +26,7 @@
 
         </activity>
         <activity android:name=".multimagepicker.MultiImagePicker">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".signature.Signature" />
         <activity android:name=".signature.NewSignatureActivity" />
@@ -58,7 +54,13 @@
         <activity android:name=".cart.Cart" />
         <activity android:name=".dagger_retrofit.MainDaggerRetrofit" />
         <activity android:name=".dagger.Main" />
-        <activity android:name=".workmanager.WorkManagerMain" />
+        <activity android:name=".workmanager.WorkManagerMain" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity
             android:name=".viewmodel.ScrollingActivity"
             android:label="@string/title_activity_scrolling"

@@ -1,7 +1,5 @@
 package com.e.learn.signature;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -13,11 +11,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-
-import com.e.learn.MainActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import com.e.learn.R;
 import com.williamww.silkysignature.views.SignaturePad;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -39,6 +35,7 @@ public class SignatureActivity extends AppCompatActivity {
 
         mSignaturePad = (SignaturePad) findViewById(R.id.signature_pad);
         mSignaturePad.setOnSignedListener(new SignaturePad.OnSignedListener() {
+
             @Override
             public void onStartSigning() {
                 //Toast.makeText(SignatureActivity.this, "OnStartSigning", Toast.LENGTH_SHORT).show();

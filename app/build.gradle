@@ -101,6 +101,8 @@ dependencies {
     // code generator for view
     implementation 'com.jakewharton:butterknife:10.1.0'
     annotationProcessor "com.jakewharton:butterknife-compiler:10.1.0"
+
+    //Workmanager
     implementation "androidx.work:work-runtime:$work"
 
     //Add FCM

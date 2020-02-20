@@ -47,13 +47,11 @@ public class MultiImagePicker extends AppCompatActivity {
     private final int REQUEST_CODE_PERMISSIONS  = 1;
     private final int REQUEST_CODE_READ_STORAGE = 2;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_multi_image);
         ButterKnife.bind(MultiImagePicker.this);
-
 
         listView = findViewById(R.id.listView);
         mProgressBar = findViewById(R.id.progressBar);
@@ -126,6 +124,7 @@ public class MultiImagePicker extends AppCompatActivity {
     }
 
     private void uploadImagesToServer() {
+
         if (InternetConnection.checkConnection(MultiImagePicker.this)) {
             Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl(ApiService.BASE_URL)

@@ -1,15 +1,12 @@
 package com.e.learn.signature;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
-
 import com.e.learn.R;
 
 public class Signature extends AppCompatActivity {
